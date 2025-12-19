@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, Spring Boot!This is in AWS";
+        return "Hello, Spring Boot!This is deployed in AWS";
     }
 }
