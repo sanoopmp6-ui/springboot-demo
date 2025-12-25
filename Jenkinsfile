@@ -1,4 +1,4 @@
-pipeline {
+pipeline { 
     agent any
 
     tools {
@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         APP_NAME = "springboot-demo.jar"
-        APP_DIR  = "/home/ec2-user/app"
+        APP_DIR  = "/home/jenkins/app"  // Updated path, owned by Jenkins
     }
 
     stages {
@@ -30,6 +30,7 @@ pipeline {
             steps {
                 echo 'Deploying application to EC2...'
                 sh '''
+                    mkdir -p $APP_DIR
                     echo "Stopping existing application (if any)..."
                     pkill -f $APP_NAME || true
 
