@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Spring Boot application!This is deployed in AWS on Dec 26 with jenkins";
+        return "Spring Boot application!This is deployed in AWS on Dec 26th  with jenkins";
         
     } 
 }
